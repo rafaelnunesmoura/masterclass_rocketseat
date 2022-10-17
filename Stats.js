@@ -1,4 +1,6 @@
 const os = require('os')
+const log = require('/home/rafael/code/projects/Javascript/masterclass_rocketseat/logger.js')
+
 
 setInterval(() => {
   const {freemem, totalmem} = os
@@ -17,4 +19,8 @@ setInterval(() => {
   console.log("******* PC STATS *******")
   console.table(stats)
 
-},100)
+  log(`${JSON.stringify(stats)}\n`)
+
+
+
+},1000)
