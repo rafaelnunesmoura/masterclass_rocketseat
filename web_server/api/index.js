@@ -25,7 +25,7 @@ http.createServer((req, res) => {
 
   //all resources
   if(!name|| !url)
-    return res.end('show all')
+    return res.end(JSON.stringify(data))
 
   if(del) {
     data.url = data.url.filter(item => String(item.url) !== String(url))
